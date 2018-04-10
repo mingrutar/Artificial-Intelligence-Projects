@@ -37,7 +37,7 @@ Video  Recognized                                                    Correct
 coming soon
 
 <a id='planning'></a>
-### Airline (Create a Domain-Independent Planner)
+### Air Cargo Problem (Create a Domain-Independent Planner)
 coming soon
 
 <a id='minmax'></a>
