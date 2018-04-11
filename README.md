@@ -7,6 +7,8 @@ Udacity Artificial Intelligence ND is an advanced course. We built projects for 
 * [Build an Adversarial Search Agent](#minmax), 
 * [Solving Sudoku with AI](#sudoku)
 
+<sub>*Udacity Deep Learning is an ongoing course. For academic integrity, the source code of my implementation are private. If you like to view the code, please let me know.*</sub>
+
 <a id='asl'></a>
 ### American Sign Language Recognizer (Use HMM to Recognize ASL)
 The overall goal of this project is to build a word recognizer for American Sign Language video sequences, demonstrating the power of probabalistic models.  In particular, this project employs  [hidden Markov models (HMM's)](https://en.wikipedia.org/wiki/Hidden_Markov_model) to analyze a series of measurements taken from videos of American Sign Language (ASL) collected for research (see the [RWTH-BOSTON-104 Database](http://www-i6.informatik.rwth-aachen.de/~dreuw/database-rwth-boston-104.php)).  In this video, the right-hand x and y locations are plotted as the speaker signs the sentence.
