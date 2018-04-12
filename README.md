@@ -2,7 +2,6 @@
 
 Udacity Artificial Intelligence ND is an advanced course. We built projects for broad field of artificial intelligence. The projects are:
 * [Use HMM to Recognize ASL](#asl), 
-* [Bayes Nets](#probability),
 * [Domain-Independent Planner](#planning), 
 * [Adversarial Search Agent](#minmax), 
 * [Solving Sudoku with AI](#sudoku)
@@ -34,10 +33,6 @@ Video  Recognized                                                    Correct
     2: JOHN WRITE HOMEWORK                                           JOHN WRITE HOMEWORK
     .......
 ```
-
-<a id='probability'></a>
-### Bayes Nets
-coming soon
 
 <a id='planning'></a>
 ### Air Cargo Problem (Create a Domain-Independent Planner)
