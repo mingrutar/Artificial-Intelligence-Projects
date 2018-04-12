@@ -3,8 +3,8 @@
 Udacity Artificial Intelligence ND is an advanced course. We built projects for broad field of artificial intelligence. The projects are:
 * [Use HMM to Recognize ASL](#asl), 
 * [Bayes Nets](#probability),
-* [Create a Domain-Independent Planner](#planning), 
-* [Build an Adversarial Search Agent](#minmax), 
+* [Domain-Independent Planner](#planning), 
+* [Adversarial Search Agent](#minmax), 
 * [Solving Sudoku with AI](#sudoku)
 
 <sub>*Udacity Deep Learning is an ongoing course. For academic integrity, the source code of my implementation are private. If you like to view the code, please let me know.*</sub>
