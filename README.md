@@ -14,7 +14,8 @@ Udacity Artificial Intelligence ND is an advanced course. We built projects for 
 The overall goal of this project is to build a word recognizer for American Sign Language video sequences, demonstrating the power of probabalistic models.  In particular, this project employs  [hidden Markov models (HMM's)](https://en.wikipedia.org/wiki/Hidden_Markov_model) to analyze a series of measurements taken from videos of American Sign Language (ASL) collected for research (see the [RWTH-BOSTON-104 Database](http://www-i6.informatik.rwth-aachen.de/~dreuw/database-rwth-boston-104.php)).  In this video, the right-hand x and y locations are plotted as the speaker signs the sentence.
 [![ASLR demo](http://www-i6.informatik.rwth-aachen.de/~dreuw/images/demosample.png)](https://drive.google.com/open?id=0B_5qGuFe-wbhUXRuVnNZVnMtam8)
 
-I implemented a half of dozen features. Below is an example of feature selections: 
+I implemented a half of dozen features. Below is an example of feature selections:
+
 ![](images/ASLDemo.png)
 
 The Model Selectors: 
