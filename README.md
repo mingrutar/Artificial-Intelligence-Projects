@@ -41,6 +41,7 @@ coming soon
 <a id='planning'></a>
 ### Air Cargo Problem (Create a Domain-Independent Planner)
 coming soon
+https://github.com/mingrutar/aind_project3_search
 
 <a id='minmax'></a>
 ### Chess-like Isolated Game (Build an Adversarial Search Agent)
@@ -48,4 +49,6 @@ coming soon
 
 <a id='sudoku'></a>
 ### Sudoku (Solving Sudoku with AI)
-coming soon
+
+https://github.com/mingrutar/aind_projects/tree/master/project1-sudoku
+
