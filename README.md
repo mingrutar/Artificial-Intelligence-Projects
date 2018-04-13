@@ -37,18 +37,94 @@ Video  Recognized                                                    Correct
 <a id='planning'></a>
 ### Air Cargo Problem (Create a Domain-Independent Planner)
 
-https://github.com/mingrutar/aind_project3_search
+|  |  |
+|:-------:|:----------|
+| ![](images/cargo.jpg) | This project is to solve deterministic logistics planning problems for an Air Cargo transport<br> system using a planning search agent. With progression search algorithms, optimal plans<br> for each problem will be computed. implement domain-independent heuristics to aid the agent search.
+
+The code needed be modified were my_air_cargo_problems.py and my_planning_graph.py. The test code, test result and heuristic analysis are shown in paper [Heuristic Analysis for the Planning Search Agent](https://drive.google.com/open?id=1dZzBZM9w-8cmJxprcO-IAgS1V_JDeEiO7AZCjXkEXak)
+
+*code example of get actions*
+```
+def get_actions(self):
+    """
+    This method creates concrete actions (no variables) for all actions in the problem
+    domain action schema and turns them into complete Action objects as defined in the
+    aimacode.planning module. It is computationally expensive to call this method directly;
+    however, it is called in the constructor and the results cached in the `actions_list` property.
+    Returns:
+    ----------
+    list<Action>: list of Action objects
+    """
+
+    # concrete actions definition: specific literal action that does not include variables as with the schema
+    # for example, the action schema 'Load(c, p, a)' can represent the concrete actions 'Load(C1, P1, SFO)'
+    # or 'Load(C2, P2, JFK)'.  The
+    def load_actions():
+        """Create all concrete Load actions and return a list
+        :return: list of Action objects
+        """
+        loads = []
+        for cargo in self.cargos:
+            for plane in self.planes:
+                for ap in self.airports:
+                    precond_pos = [expr("At({}, {})".format(cargo, ap)), expr("At({}, {})".format(plane, ap))]
+                    precond_neg = []
+                    effect_add = [expr("In({}, {})".format(cargo, plane))]
+                    effect_rem = [expr("At({}, {})".format(cargo, ap))]
+                    load = Action(expr("Load({}, {}, {})".format(cargo, plane, ap)),
+                                  [precond_pos, precond_neg],
+                                  [effect_add, effect_rem])
+                    loads.append(load)
+        return loads
+```
+
+wrote research paper "[The History of AI Planning](https://drive.google.com/open?id=1KglOWcA0A5OVquWRGrnCtiQzlffe38M86VGfOBNKMSI)"
 
 <a id='minmax'></a>
 ### Chess-like Isolated Game (Build an Adversarial Search Agent) 
 
 |  |  |
 |:-------:|:----------|
-| ![](images/knights.jpg) | The task is to develop an adversarial search agent to play a chess-like game "Isolation".<br>Isolation is a deterministic, two-player game of perfect information in which the players <br>alternate turns moving a single piece from one cell to another with only L-shaped movements <br>(like a knight in chess) on a board. Whenever either player occupies a cell, that cell becomes<br>blocked for the remainder of the game. The first player with no remaining legal moves loses, <br>and the opponent is declared the winner. |
+| ![](images/knights.jpg) | The task is to develop an adversarial search agent to play a chess-like game "Isolation".<br>Isolation is a deterministic, two-player game of perfect information in which the players <br>alternate turns moving a single piece from one cell to another with only L-shaped<br> movements (like a knight in chess) on a board. Whenever either player occupies a <br>cell, that cell becomesblocked for the remainder of the game. The first player with<br> no remaining legal moves loses, and the opponent is declared the winner. |
 
 The code needed be modified was game_agent.py. The test code, test result and heuristic analysis are shown in paper [Heuristic Analysis for Game-Playing Agent](https://drive.google.com/open?id=17CtG2893zjYQYkXrKjg-5RZFnVQE1XdL970DZF1O48Q)
 
-Wrote a review on IBM DeepBlue and Google AlphaGO "[From Rain Man to Thinking Man  A Huge Leap in AI Made by AlphaGo](https://drive.google.com/open?id=1VhK4Ip0_Q5D2tqDTFlrDPc2B-ULn1vK_3pHOWrZ2j_o)"
+*Code example of a score algorithm*
+```
+def custom_score(game, player):
+    """Calculate the heuristic value of a game state from the point of view of the given player.
+    This should be the best heuristic function for your project submission. Note: this function 
+    should be called from within a Player instance as `self.score()`.
+    Parameters
+    ----------
+    game : `isolation.Board`
+        An instance of `isolation.Board` encoding the current state of the
+        game (e.g., player locations and blocked cells).
+    player : object
+        A player instance in the current game (i.e., an object corresponding to
+        one of the player objects `game.__player_1__` or `game.__player_2__`.)
+    Returns
+    -------
+    float
+        The heuristic value of the current game state to the specified player.
+    <=> based on improved_score. randonly reduce score a bit if the location is close to edge,  
+    """
+    if game.is_loser(player):
+        return float("-inf")
+
+    if game.is_winner(player):
+        return float("inf")
+
+    own_moves = len(game.get_legal_moves(player))
+    opp_moves = len(game.get_legal_moves(game.get_opponent(player)))
+    score = own_moves - opp_moves
+    w, h = game.width / 2., game.height / 2.
+    y, x = game.get_player_location(player)
+    ratio = (abs(h - y) + abs(w - x))/(w+h)     # how close to center
+    return score * (2 + ratio)                  # weight score more than the closeness    
+```
+
+Wrote a review on IBM DeepBlue and Google AlphaGO "[From Rain Man to Thinking Man, A Huge Leap in AI Made by AlphaGo](https://drive.google.com/open?id=1VhK4Ip0_Q5D2tqDTFlrDPc2B-ULn1vK_3pHOWrZ2j_o)"
 
 <a id='sudoku'></a>
 ### Sudoku (Solving Sudoku with AI)
