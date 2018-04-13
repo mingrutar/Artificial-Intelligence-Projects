@@ -150,5 +150,5 @@ def search(values):
         print("unsolved=", unsolved)
 ```
 
-Screenshot of running result
+Screenshot of run result
 ![](images/sudoku.jpg)
