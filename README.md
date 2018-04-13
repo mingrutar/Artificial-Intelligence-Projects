@@ -43,7 +43,7 @@ Video  Recognized                                                    Correct
 
 The code needed be modified were my_air_cargo_problems.py and my_planning_graph.py. The test code, test result and heuristic analysis are shown in paper __[Heuristic Analysis for the Planning Search Agent](https://drive.google.com/open?id=1dZzBZM9w-8cmJxprcO-IAgS1V_JDeEiO7AZCjXkEXak)__
 
-*code example of get actions*
+*code example*
 ```
 def get_actions(self):
     """
@@ -89,7 +89,7 @@ wrote research paper __"[The History of AI Planning](https://drive.google.com/op
 
 The code needed be modified was game_agent.py. The test code, test result and heuristic analysis are shown in paper __[Heuristic Analysis for Game-Playing Agent](https://drive.google.com/open?id=17CtG2893zjYQYkXrKjg-5RZFnVQE1XdL970DZF1O48Q)__
 
-*Code example of a score algorithm*
+*Code example ofpositive evaluation*
 ```
 def custom_score(game, player):
     """Calculate the heuristic value of a game state from the point of view of the given player.
