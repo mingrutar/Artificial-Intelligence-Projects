@@ -40,9 +40,11 @@ Video  Recognized                                                    Correct
 https://github.com/mingrutar/aind_project3_search
 
 <a id='minmax'></a>
-### Chess-like Isolated Game (Build an Adversarial Search Agent)
+### Chess-like Isolated Game (Build an Adversarial Search Agent) 
 
-The task is to develop an adversarial search agent to play a chess-like game "Isolation". Isolation is a deterministic, two-player game of perfect information in which the players alternate turns moving a single piece from one cell to another with only L-shaped movements (like a knight in chess) on a board. Whenever either player occupies a cell, that cell becomes blocked for the remainder of the game. The first player with no remaining legal moves loses, and the opponent is declared the winner.
+|  |  |
+|:-------:|:----------|
+| ![](images/knights.jpg) | The task is to develop an adversarial search agent to play a chess-like game "Isolation".<br>Isolation is a deterministic, two-player game of perfect information in which the players <br>alternate turns moving a single piece from one cell to another with only L-shaped movements <br>(like a knight in chess) on a board. Whenever either player occupies a cell, that cell becomes<br>blocked for the remainder of the game. The first player with no remaining legal moves loses, <br>and the opponent is declared the winner. |
 
 The code needed be modified was game_agent.py. The test code, test result and heuristic analysis are shown in paper [Heuristic Analysis for Game-Playing Agent](https://drive.google.com/open?id=17CtG2893zjYQYkXrKjg-5RZFnVQE1XdL970DZF1O48Q)
 
