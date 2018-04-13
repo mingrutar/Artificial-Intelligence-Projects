@@ -43,6 +43,41 @@ Video  Recognized                                                    Correct
 
 The code needed be modified were my_air_cargo_problems.py and my_planning_graph.py. The test code, test result and heuristic analysis are shown in paper [Heuristic Analysis for the Planning Search Agent](https://drive.google.com/open?id=1dZzBZM9w-8cmJxprcO-IAgS1V_JDeEiO7AZCjXkEXak)
 
+*code example of get actions*
+```
+def get_actions(self):
+    """
+    This method creates concrete actions (no variables) for all actions in the problem
+    domain action schema and turns them into complete Action objects as defined in the
+    aimacode.planning module. It is computationally expensive to call this method directly;
+    however, it is called in the constructor and the results cached in the `actions_list` property.
+    Returns:
+    ----------
+    list<Action>: list of Action objects
+    """
+
+    # concrete actions definition: specific literal action that does not include variables as with the schema
+    # for example, the action schema 'Load(c, p, a)' can represent the concrete actions 'Load(C1, P1, SFO)'
+    # or 'Load(C2, P2, JFK)'.  The
+    def load_actions():
+        """Create all concrete Load actions and return a list
+        :return: list of Action objects
+        """
+        loads = []
+        for cargo in self.cargos:
+            for plane in self.planes:
+                for ap in self.airports:
+                    precond_pos = [expr("At({}, {})".format(cargo, ap)), expr("At({}, {})".format(plane, ap))]
+                    precond_neg = []
+                    effect_add = [expr("In({}, {})".format(cargo, plane))]
+                    effect_rem = [expr("At({}, {})".format(cargo, ap))]
+                    load = Action(expr("Load({}, {}, {})".format(cargo, plane, ap)),
+                                  [precond_pos, precond_neg],
+                                  [effect_add, effect_rem])
+                    loads.append(load)
+        return loads
+```
+
 wrote research paper "[The History of AI Planning](https://drive.google.com/open?id=1KglOWcA0A5OVquWRGrnCtiQzlffe38M86VGfOBNKMSI)"
 
 <a id='minmax'></a>
