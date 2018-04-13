@@ -37,18 +37,24 @@ Video  Recognized                                                    Correct
 <a id='planning'></a>
 ### Air Cargo Problem (Create a Domain-Independent Planner)
 
-https://github.com/mingrutar/aind_project3_search
+|  |  |
+|:-------:|:----------|
+| ![](images/cargo.jpg) | This project is to solve deterministic logistics planning problems for an Air Cargo transport<br> system using a planning search agent. With progression search algorithms, optimal plans<br> for each problem will be computed. implement domain-independent heuristics to aid the agent search.
+
+The code needed be modified were my_air_cargo_problems.py and my_planning_graph.py. The test code, test result and heuristic analysis are shown in paper [Heuristic Analysis for the Planning Search Agent](https://drive.google.com/open?id=1dZzBZM9w-8cmJxprcO-IAgS1V_JDeEiO7AZCjXkEXak)
+
+wrote research paper "[The History of AI Planning](https://drive.google.com/open?id=1KglOWcA0A5OVquWRGrnCtiQzlffe38M86VGfOBNKMSI)"
 
 <a id='minmax'></a>
 ### Chess-like Isolated Game (Build an Adversarial Search Agent) 
 
 |  |  |
 |:-------:|:----------|
-| ![](images/knights.jpg) | The task is to develop an adversarial search agent to play a chess-like game "Isolation".<br>Isolation is a deterministic, two-player game of perfect information in which the players <br>alternate turns moving a single piece from one cell to another with only L-shaped movements <br>(like a knight in chess) on a board. Whenever either player occupies a cell, that cell becomes<br>blocked for the remainder of the game. The first player with no remaining legal moves loses, <br>and the opponent is declared the winner. |
+| ![](images/knights.jpg) | The task is to develop an adversarial search agent to play a chess-like game "Isolation".<br>Isolation is a deterministic, two-player game of perfect information in which the players <br>alternate turns moving a single piece from one cell to another with only L-shaped<br> movements (like a knight in chess) on a board. Whenever either player occupies a <br>cell, that cell becomesblocked for the remainder of the game. The first player with<br> no remaining legal moves loses, and the opponent is declared the winner. |
 
 The code needed be modified was game_agent.py. The test code, test result and heuristic analysis are shown in paper [Heuristic Analysis for Game-Playing Agent](https://drive.google.com/open?id=17CtG2893zjYQYkXrKjg-5RZFnVQE1XdL970DZF1O48Q)
 
-Wrote a review on IBM DeepBlue and Google AlphaGO "[From Rain Man to Thinking Man  A Huge Leap in AI Made by AlphaGo](https://drive.google.com/open?id=1VhK4Ip0_Q5D2tqDTFlrDPc2B-ULn1vK_3pHOWrZ2j_o)"
+Wrote a review on IBM DeepBlue and Google AlphaGO "[From Rain Man to Thinking Man, A Huge Leap in AI Made by AlphaGo](https://drive.google.com/open?id=1VhK4Ip0_Q5D2tqDTFlrDPc2B-ULn1vK_3pHOWrZ2j_o)"
 
 <a id='sudoku'></a>
 ### Sudoku (Solving Sudoku with AI)
