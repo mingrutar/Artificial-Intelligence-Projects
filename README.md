@@ -129,7 +129,7 @@ Wrote a review on IBM DeepBlue and Google AlphaGO "[From Rain Man to Thinking Ma
 <a id='sudoku'></a>
 ### Sudoku (Solving Sudoku with AI)
 
-*code example of get actions*
+*code example of search*
 ```
 def search(values):
     values = reduce_puzzle(values)
