@@ -55,7 +55,6 @@ wrote research paper "[The History of AI Planning](https://drive.google.com/open
 The code needed be modified was game_agent.py. The test code, test result and heuristic analysis are shown in paper [Heuristic Analysis for Game-Playing Agent](https://drive.google.com/open?id=17CtG2893zjYQYkXrKjg-5RZFnVQE1XdL970DZF1O48Q)
 
 *Code example of a score algorithm*
-
 ```
 def custom_score(game, player):
     """Calculate the heuristic value of a game state from the point of view of the given player.
