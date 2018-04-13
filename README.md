@@ -36,12 +36,17 @@ Video  Recognized                                                    Correct
 
 <a id='planning'></a>
 ### Air Cargo Problem (Create a Domain-Independent Planner)
-coming soon
+
 https://github.com/mingrutar/aind_project3_search
 
 <a id='minmax'></a>
 ### Chess-like Isolated Game (Build an Adversarial Search Agent)
-coming soon
+
+The task is to develop an adversarial search agent to play a chess-like game "Isolation". Isolation is a deterministic, two-player game of perfect information in which the players alternate turns moving a single piece from one cell to another with only L-shaped movements (like a knight in chess) on a board. Whenever either player occupies a cell, that cell becomes blocked for the remainder of the game. The first player with no remaining legal moves loses, and the opponent is declared the winner.
+
+The code needed be modified was game_agent.py. The test code, test result and heuristic analysis are shown in paper [Heuristic Analysis for Game-Playing Agent](https://drive.google.com/open?id=17CtG2893zjYQYkXrKjg-5RZFnVQE1XdL970DZF1O48Q)
+
+Wrote a review on IBM DeepBlue and Google AlphaGO "[From Rain Man to Thinking Man  A Huge Leap in AI Made by AlphaGo](https://drive.google.com/open?id=1VhK4Ip0_Q5D2tqDTFlrDPc2B-ULn1vK_3pHOWrZ2j_o)"
 
 <a id='sudoku'></a>
 ### Sudoku (Solving Sudoku with AI)
