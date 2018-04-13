@@ -136,7 +136,7 @@ def search(values):
     if not values:
         return False               # end, out
     if all(len(v) == 1 for v in values.values()):
-        return values              # got valus, out
+        return values              # got values, out
     unsolved = {k: v for k, v in values.items() if len(v) > 1}
     if unsolved:
         sorted_unsolved = sorted(unsolved.items(), key=lambda x: len(x[1]))
