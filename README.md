@@ -129,5 +129,26 @@ Wrote a review on IBM DeepBlue and Google AlphaGO "[From Rain Man to Thinking Ma
 <a id='sudoku'></a>
 ### Sudoku (Solving Sudoku with AI)
 
-https://github.com/mingrutar/aind_projects/tree/master/project1-sudoku
+*code example of get actions*
+```
+def search(values):
+    values = reduce_puzzle(values)
+    if not values:
+        return False               # end, out
+    if all(len(v) == 1 for v in values.values()):
+        return values              # got valus, out
+    unsolved = {k: v for k, v in values.items() if len(v) > 1}
+    if unsolved:
+        sorted_unsolved = sorted(unsolved.items(), key=lambda x: len(x[1]))
+        for s, v in sorted_unsolved:
+            for d in v:
+                copy_of_values = values.copy()
+                copy_of_values[s] = d
+                attempt = search(copy_of_values)      # recurse
+                if attempt:
+                    return attempt
+        print("unsolved=", unsolved)
+```
 
+Screenshot of running result
+![](images/sudoku.jpg)
