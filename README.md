@@ -41,7 +41,7 @@ Video  Recognized                                                    Correct
 |:-------:|:----------|
 | ![](images/cargo.jpg) | This project is to solve deterministic logistics planning problems for an Air Cargo transport<br> system using a planning search agent. With progression search algorithms, optimal plans<br> for each problem will be computed. implement domain-independent heuristics to aid the agent search.
 
-The code needed be modified were my_air_cargo_problems.py and my_planning_graph.py. The test code, test result and heuristic analysis are shown in paper [Heuristic Analysis for the Planning Search Agent](https://drive.google.com/open?id=1dZzBZM9w-8cmJxprcO-IAgS1V_JDeEiO7AZCjXkEXak)
+The code needed be modified were my_air_cargo_problems.py and my_planning_graph.py. The test code, test result and heuristic analysis are shown in paper __[Heuristic Analysis for the Planning Search Agent](https://drive.google.com/open?id=1dZzBZM9w-8cmJxprcO-IAgS1V_JDeEiO7AZCjXkEXak)__
 
 *code example of get actions*
 ```
@@ -78,7 +78,7 @@ def get_actions(self):
         return loads
 ```
 
-wrote research paper "[The History of AI Planning](https://drive.google.com/open?id=1KglOWcA0A5OVquWRGrnCtiQzlffe38M86VGfOBNKMSI)"
+wrote research paper __"[The History of AI Planning](https://drive.google.com/open?id=1KglOWcA0A5OVquWRGrnCtiQzlffe38M86VGfOBNKMSI)"__
 
 <a id='minmax'></a>
 ### Chess-like Isolated Game (Build an Adversarial Search Agent) 
@@ -87,7 +87,7 @@ wrote research paper "[The History of AI Planning](https://drive.google.com/open
 |:-------:|:----------|
 | ![](images/knights.jpg) | The task is to develop an adversarial search agent to play a chess-like game "Isolation".<br>Isolation is a deterministic, two-player game of perfect information in which the players <br>alternate turns moving a single piece from one cell to another with only L-shaped<br> movements (like a knight in chess) on a board. Whenever either player occupies a <br>cell, that cell becomesblocked for the remainder of the game. The first player with<br> no remaining legal moves loses, and the opponent is declared the winner. |
 
-The code needed be modified was game_agent.py. The test code, test result and heuristic analysis are shown in paper [Heuristic Analysis for Game-Playing Agent](https://drive.google.com/open?id=17CtG2893zjYQYkXrKjg-5RZFnVQE1XdL970DZF1O48Q)
+The code needed be modified was game_agent.py. The test code, test result and heuristic analysis are shown in paper __[Heuristic Analysis for Game-Playing Agent](https://drive.google.com/open?id=17CtG2893zjYQYkXrKjg-5RZFnVQE1XdL970DZF1O48Q)__
 
 *Code example of a score algorithm*
 ```
@@ -124,7 +124,7 @@ def custom_score(game, player):
     return score * (2 + ratio)                  # weight score more than the closeness    
 ```
 
-Wrote a review on IBM DeepBlue and Google AlphaGO "[From Rain Man to Thinking Man, A Huge Leap in AI Made by AlphaGo](https://drive.google.com/open?id=1VhK4Ip0_Q5D2tqDTFlrDPc2B-ULn1vK_3pHOWrZ2j_o)"
+Wrote a review on IBM DeepBlue and Google AlphaGO __"[From Rain Man to Thinking Man, A Huge Leap in AI Made by AlphaGo](https://drive.google.com/open?id=1VhK4Ip0_Q5D2tqDTFlrDPc2B-ULn1vK_3pHOWrZ2j_o)"__
 
 <a id='sudoku'></a>
 ### Sudoku (Solving Sudoku with AI)
