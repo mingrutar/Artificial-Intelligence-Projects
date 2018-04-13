@@ -54,6 +54,42 @@ wrote research paper "[The History of AI Planning](https://drive.google.com/open
 
 The code needed be modified was game_agent.py. The test code, test result and heuristic analysis are shown in paper [Heuristic Analysis for Game-Playing Agent](https://drive.google.com/open?id=17CtG2893zjYQYkXrKjg-5RZFnVQE1XdL970DZF1O48Q)
 
+*Code example of a score algorithm*
+
+```
+def custom_score(game, player):
+    """Calculate the heuristic value of a game state from the point of view of the given player.
+    This should be the best heuristic function for your project submission. Note: this function 
+    should be called from within a Player instance as `self.score()`.
+    Parameters
+    ----------
+    game : `isolation.Board`
+        An instance of `isolation.Board` encoding the current state of the
+        game (e.g., player locations and blocked cells).
+    player : object
+        A player instance in the current game (i.e., an object corresponding to
+        one of the player objects `game.__player_1__` or `game.__player_2__`.)
+    Returns
+    -------
+    float
+        The heuristic value of the current game state to the specified player.
+    <=> based on improved_score. randonly reduce score a bit if the location is close to edge,  
+    """
+    if game.is_loser(player):
+        return float("-inf")
+
+    if game.is_winner(player):
+        return float("inf")
+
+    own_moves = len(game.get_legal_moves(player))
+    opp_moves = len(game.get_legal_moves(game.get_opponent(player)))
+    score = own_moves - opp_moves
+    w, h = game.width / 2., game.height / 2.
+    y, x = game.get_player_location(player)
+    ratio = (abs(h - y) + abs(w - x))/(w+h)     # how close to center
+    return score * (2 + ratio)                  # weight score more than the closeness    
+```
+
 Wrote a review on IBM DeepBlue and Google AlphaGO "[From Rain Man to Thinking Man, A Huge Leap in AI Made by AlphaGo](https://drive.google.com/open?id=1VhK4Ip0_Q5D2tqDTFlrDPc2B-ULn1vK_3pHOWrZ2j_o)"
 
 <a id='sudoku'></a>
