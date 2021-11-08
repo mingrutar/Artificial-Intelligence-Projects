@@ -1,7 +1,8 @@
-## Artificial Intelligence Projects for [Udacity Artificial Intelligence ND](https://www.udacity.com/course/artificial-intelligence-nanodegree--nd889)
+## Artificial Intelligence 
 
-Udacity Artificial Intelligence ND is an advanced course. We built projects for broad field of artificial intelligence. The projects are:
-* [Use HMM to Recognize ASL](#asl), 
+[Udacity Artificial Intelligence ND](https://www.udacity.com/course/artificial-intelligence-nanodegree--nd889) is an advanced course. We built projects for broad field of artificial intelligence.
+
+* [Use HMM to Recognize American Sign Language](#asl), 
 * [Domain-Independent Planner](#planning), 
 * [Adversarial Search Agent](#minmax), 
 * [Solving Sudoku with AI](#sudoku)
